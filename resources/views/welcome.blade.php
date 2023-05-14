@@ -61,7 +61,7 @@
                 <div class="info">
                     Insereix dades a la base de dades. Les dades JSON han de contenir totes les columnes de la taula i els paràmetres han de coincidir amb els noms de les columnes..
                     <p>
-                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L72">Veure codi del CameresController@cameres_seguretat[POST]</a>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L71">Veure codi del CameresController@cameres_seguretat[POST]</a>
                     </p>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                 <div class="info">
                     Obtenim tota la informació de la càmera amb l'ID que estem filtrant.
                     <p>
-                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L133">Veure codi del CameresController@cameres_seguretat</a>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L135">Veure codi del CameresController@cameres_seguretat</a>
                     </p>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                     <div class="info">
                         PUT/PATCH: Actualitzem la informació de la càmera específica identificada amb l'ID que estem filtrant.
                         <p>
-                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L156">Veure codi del CameresController@cameres_seguretat[PUT/PATCH]</a>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L161">Veure codi del CameresController@cameres_seguretat[PUT/PATCH]</a>
                         </p>
                     </div>
                 </div>
@@ -205,7 +205,7 @@
                     <div class="info">
                         DELETE: Esborrem la informació de la càmera específica identificada amb l'ID que estem filtrant.
                         <p>
-                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L187">Veure codi del CameresController@cameres_seguretat[DELETE]</a>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L195">Veure codi del CameresController@cameres_seguretat[DELETE]</a>
                         </p>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                     Els paràmetres s'han d'enviar en format JSON i han de coincidir amb els noms de les columnes de la taula.
                     Torna una llista de resultats que coincideixen amb els criteris de filtratge.
                     <p>
-                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L106">Veure codi del CameresController@filter</a>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L105">Veure codi del CameresController@filter</a>
                     </p>
                 </div>
             </div>
@@ -349,7 +349,7 @@
                     <div class="info">
                         A partir de l'ID de càmera de seguretat, aquesta funció recupera la ubicació geogràfica precisa de la càmera.
                         <p>
-                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L51">Veure codi del CameresController@ubicacio_exacta</a>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L50">Veure codi del CameresController@ubicacio_exacta</a>
                         </p>
                     </div>
                 </div>
@@ -398,7 +398,7 @@
                     <div class="info">
                         Obté tota la informació de cadascuna de les rutes que tenim habilitades per fer consultes, en concret la ruta, els mètodes, els paràmetres i la descripció.
                         <p>
-                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L202">Veure codi del CameresController@help</a>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L215">Veure codi del CameresController@help</a>
                         </p>
                     </div>
                 </div>
