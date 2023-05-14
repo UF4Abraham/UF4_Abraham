@@ -34,7 +34,6 @@ class CameresController extends Controller
             $context = stream_context_create($opts);
             $json = file_get_contents($referer, false, $context);
             $data = json_decode($json, true);
-            $data['address']['status'] = "OK";
             
             return $data['address'];
         } catch (Exception $e) {
@@ -55,7 +54,7 @@ class CameresController extends Controller
             $latitud = $camara->latitud;
 
             $ubicacio = $this->location($latitud, $longitud);
-            $camara->status = "OK";
+            
             return $ubicacio;
         } catch (Exception $e) {
             return response()->json([
@@ -115,7 +114,10 @@ class CameresController extends Controller
             $result = $query->get();
     
             if ($result->isEmpty()) {
-                return "No hi ha cap resultat per les dades que estàs filtrant";
+                return response()->json([
+                    "status" => "ERROR",
+                    "message" => "No hi ha cap resultat per les dades que estàs filtrant"
+                ]);
             }
     
             return $result;
@@ -135,7 +137,10 @@ class CameresController extends Controller
             $camara = Cameras::find($id_cam_seguretat);
             
             if (!$camara) {
-                return "El id de la càmara no existeix";
+                return response()->json([
+                    "status" => "ERROR",
+                    "message" => "El id de la càmara no existeix"
+                ]);
             }
             
             $camara->status = "OK";
@@ -158,7 +163,10 @@ class CameresController extends Controller
             $camara = Cameras::find($id_cam_seguretat);
 
             if (!$camara) {
-                return "El id de la càmara no existeix";
+                return response()->json([
+                    "status" => "ERROR",
+                    "message" => "El id de la càmara no existeix"
+                ]);
             }
 
             foreach ($request->all() as $property => $value) {
@@ -189,11 +197,16 @@ class CameresController extends Controller
         $camara = Cameras::find($id_cam_seguretat);
 
         if(is_null($camara)){
-            return response() -> json("Id de la camara no trobat", 404);
+            return response()->json([
+                "status" => "ERROR",
+                "message" => "El id de la càmara no existeix"
+            ]);
         }
         $camara -> delete();
 
-        return response() -> noContent();
+        return response()->json([
+            "status" => "OK",
+        ]);
     }
 
     /**

@@ -1,653 +1,446 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>UF4 Abraham</title>
+    <script src="https://kit.fontawesome.com/3653968724.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <!-- Styles -->
-    <style>
-        /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-        html {
-            line-height: 1.15;
-            -webkit-text-size-adjust: 100%
-        }
+    <link rel="stylesheet" href="{{asset('css/style.css') }}">
 
-        body {
-            margin: 0
-        }
-
-        a {
-            background-color: transparent
-        }
-
-        [hidden] {
-            display: none
-        }
-
-        html {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            line-height: 1.5
-        }
-
-        *,
-        :after,
-        :before {
-            box-sizing: border-box;
-            border: 0 solid #e2e8f0
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit
-        }
-
-        svg,
-        video {
-            display: block;
-            vertical-align: middle
-        }
-
-        video {
-            max-width: 100%;
-            height: auto
-        }
-
-        .bg-white {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-        }
-
-        .bg-gray-100 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(243 244 246 / var(--tw-bg-opacity))
-        }
-
-        .border-gray-200 {
-            --tw-border-opacity: 1;
-            border-color: rgb(229 231 235 / var(--tw-border-opacity))
-        }
-
-        .border-t {
-            border-top-width: 1px
-        }
-
-        .flex {
-            display: flex
-        }
-
-        .grid {
-            display: grid
-        }
-
-        .hidden {
-            display: none
-        }
-
-        .items-center {
-            align-items: center
-        }
-
-        .justify-center {
-            justify-content: center
-        }
-
-        .font-semibold {
-            font-weight: 600
-        }
-
-        .h-5 {
-            height: 1.25rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
-        .h-16 {
-            height: 4rem
-        }
-
-        .text-sm {
-            font-size: .875rem
-        }
-
-        .text-lg {
-            font-size: 1.125rem
-        }
-
-        .leading-7 {
-            line-height: 1.75rem
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .ml-1 {
-            margin-left: .25rem
-        }
-
-        .mt-2 {
-            margin-top: .5rem
-        }
-
-        .mr-2 {
-            margin-right: .5rem
-        }
-
-        .ml-2 {
-            margin-left: .5rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .ml-4 {
-            margin-left: 1rem
-        }
-
-        .mt-8 {
-            margin-top: 2rem
-        }
-
-        .ml-12 {
-            margin-left: 3rem
-        }
-
-        .-mt-px {
-            margin-top: -1px
-        }
-
-        .max-w-6xl {
-            max-width: 72rem
-        }
-
-        .min-h-screen {
-            min-height: 100vh
-        }
-
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .p-6 {
-            padding: 1.5rem
-        }
-
-        .py-4 {
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        .px-6 {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem
-        }
-
-        .pt-8 {
-            padding-top: 2rem
-        }
-
-        .fixed {
-            position: fixed
-        }
-
-        .relative {
-            position: relative
-        }
-
-        .top-0 {
-            top: 0
-        }
-
-        .right-0 {
-            right: 0
-        }
-
-        .shadow {
-            --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
-            --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-gray-200 {
-            --tw-text-opacity: 1;
-            color: rgb(229 231 235 / var(--tw-text-opacity))
-        }
-
-        .text-gray-300 {
-            --tw-text-opacity: 1;
-            color: rgb(209 213 219 / var(--tw-text-opacity))
-        }
-
-        .text-gray-400 {
-            --tw-text-opacity: 1;
-            color: rgb(156 163 175 / var(--tw-text-opacity))
-        }
-
-        .text-gray-500 {
-            --tw-text-opacity: 1;
-            color: rgb(107 114 128 / var(--tw-text-opacity))
-        }
-
-        .text-gray-600 {
-            --tw-text-opacity: 1;
-            color: rgb(75 85 99 / var(--tw-text-opacity))
-        }
-
-        .text-gray-700 {
-            --tw-text-opacity: 1;
-            color: rgb(55 65 81 / var(--tw-text-opacity))
-        }
-
-        .text-gray-900 {
-            --tw-text-opacity: 1;
-            color: rgb(17 24 39 / var(--tw-text-opacity))
-        }
-
-        .underline {
-            text-decoration: underline
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .w-5 {
-            width: 1.25rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
-        .w-auto {
-            width: auto
-        }
-
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr))
-        }
-
-        @media (min-width:640px) {
-            .sm\:rounded-lg {
-                border-radius: .5rem
-            }
-
-            .sm\:block {
-                display: block
-            }
-
-            .sm\:items-center {
-                align-items: center
-            }
-
-            .sm\:justify-start {
-                justify-content: flex-start
-            }
-
-            .sm\:justify-between {
-                justify-content: space-between
-            }
-
-            .sm\:h-20 {
-                height: 5rem
-            }
-
-            .sm\:ml-0 {
-                margin-left: 0
-            }
-
-            .sm\:px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
-            .sm\:pt-0 {
-                padding-top: 0
-            }
-
-            .sm\:text-left {
-                text-align: left
-            }
-
-            .sm\:text-right {
-                text-align: right
-            }
-        }
-
-        @media (min-width:768px) {
-            .md\:border-t-0 {
-                border-top-width: 0
-            }
-
-            .md\:border-l {
-                border-left-width: 1px
-            }
-
-            .md\:grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
-            }
-        }
-
-        @media (min-width:1024px) {
-            .lg\:px-8 {
-                padding-left: 2rem;
-                padding-right: 2rem
-            }
-        }
-
-        @media (prefers-color-scheme:dark) {
-            .dark\:bg-gray-800 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(31 41 55 / var(--tw-bg-opacity))
-            }
-
-            .dark\:bg-gray-900 {
-                --tw-bg-opacity: 1;
-                background-color: rgb(17 24 39 / var(--tw-bg-opacity))
-            }
-
-            .dark\:border-gray-700 {
-                --tw-border-opacity: 1;
-                border-color: rgb(55 65 81 / var(--tw-border-opacity))
-            }
-
-            .dark\:text-white {
-                --tw-text-opacity: 1;
-                color: rgb(255 255 255 / var(--tw-text-opacity))
-            }
-
-            .dark\:text-gray-400 {
-                --tw-text-opacity: 1;
-                color: rgb(156 163 175 / var(--tw-text-opacity))
-            }
-
-            .dark\:text-gray-500 {
-                --tw-text-opacity: 1;
-                color: rgb(107 114 128 / var(--tw-text-opacity))
-            }
-        }
-    </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: red;
-
-        }
-
-        .class_nav {
-            background-color: black;
-            width: 100%;
-            min-height: 10%;
-            color: white;
-        }
-        section{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            background-color: darkblue;
-        }
-
-        article {
-            background-color: #00003b;
-            width: 100%;
-            min-height: 10%;
-            color: black;
-            padding: 10px;
-        }
-        h3{
-            color: white;
-            background-color: black;
-        }
-
-        /* los articulo par estara alineado a la derecha y los impares a las izquierda */
-        article:nth-child(even) {
-            text-align: right;
-            left: 25%;
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        div {
-            align-content: left;
-            background-color: grey;
-
-        }
-
-        .title {
-            /* mayusculas */
-            text-transform: uppercase;
-        }
-    </style>
+    <title>API Càmeres Seguretat</title>
 </head>
-
 <body>
-    <nav class="class_nav">UF4 Abraham</nav>
-    <script>
-        fetch('http://127.0.0.1:8000/api/help', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function(response) {
-            return response.json();
-        }).then(function(myJson) {
-            $('#code1_res').text(JSON.stringify(myJson));
-            $('#code1_pet').text(" fetch('http://127.0.0.1:8000/api/help', {     method: 'GET',     headers: {         'Content-Type': 'application/json'     }) }) .then(function(response) {     return response.json(); }) .then(function(myJson) { $('#code1_res').text(JSON.stringify(myJson)); });");
+    <div class="container">
 
-        });
-        fetch('http://127.0.0.1:8000/api/location/41.3399628/2.1210822', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function(response) {
-            return response.json();
-        }).then(function(myJson) {
-            $('#code2_res').text(JSON.stringify(myJson));
-            $('#code2_pet').text(" fetch('http://127.0.0.1:8000/api/location/41.3399628/2.1210822', {     method: 'GET',     headers: {         'Content-Type': 'application/json'     }) }) .then(function(response) {     return response.json(); }) .then(function(myJson) { $('#code3_res').text(JSON.stringify(myJson)); });");
+        <h1 class="fw-bold mt-5">API Càmeres Seguretat</h1>
+        
+        <div class="row mt-5">
+            <div class="col">
 
-        });
-        fetch('http://127.0.0.1:8000/api/filter', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    "id_cam_seguretat": 417105
-                })
-            })
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(myJson) {
-                $('#code3_res').text(JSON.stringify(myJson));
-                $('#code3_pet').text(" fetch('http://127.0.0.1:8000/api/filter', {     method: 'POST',     headers: {         'Content-Type': 'application/json'     },     body: JSON.stringify({         'id_cam_seguretat': 417105     }) }) .then(function(response) {     return response.json(); }) .then(function(myJson) { $('#code3_res').text(JSON.stringify(myJson)); });");
+                <div class="info">
+                    
+                    Obtenim tota la informació de cadascuna de les càmeres.
+                    <p>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L18">Veure codi del CameresController@cameres_seguretat</a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            });
-        fetch('http://127.0.0.1:8000/api/insert', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                "id_cam_seguretat": 1,
-                "codi_cam_seguretat": "CIM Ronda",
-                "tipus_cam_seguretat": "Càmera mòbil",
-                "num_cam_seguretat": null,
-                "codi_suport": "Mastil",
-                "codi_districte": 3,
-                "nom_districte": " Sants-Montjuïc",
-                "codi_barri": 12,
-                "nom_barri": "la Marina del Prat Vermell",
-                "X_ETRS89": 426462403,
-                "Y_ETRS89": 4576869858,
-                "longitud": 2.1210822,
-                "latitud": 41.3399628,
-                "data_alta": "2000-01-01"
-            })
-        }).then(function(response) {
-            return response.json();
-        }).then(function(myJson) {
-            $('#code4_res').text(JSON.stringify(myJson));
-            $('#code4_pet').text('fetch("http://127.0.0.1:8000/api/insert", {method: "POST",headers: {    "Content-Type": "application/json"},body: JSON.stringify({    "id_cam_seguretat": 1,    "codi_cam_seguretat": "CIM Ronda",    "tipus_cam_seguretat": "Càmera mòbil",    "num_cam_seguretat": null,    "codi_suport": "Mastil",    "codi_districte": 3,    "nom_districte": " Sants-Montjuïc",    "codi_barri": 12,    "nom_barri": "la Marina del Prat Vermell",    "X_ETRS89": 426462403,    "Y_ETRS89": 4576869858,    "longitud": 2.1210822,    "latitud": 41.3399628,    "data_alta": "2000-01-01"})});');
-        });
+        <div class="row cameres_seguretat_get mt-5">
 
+            <div class="col-8">
+                <div class="div_cameres_seguretat_get">
+                    <img class="img-fluid" src="images/imatge_1.png" alt="">
+                </div>
+                
+                <div class="div_cameres_seguretat_get_function mt-4">
+                    <img class="img-fluid" src="images/imatge_1_function.png" alt="">
+                </div>
+                
+            </div>
+            <div class="col-4">
+                <div class="call_exemple_cameres_seguretat_get">
+                    <strong class="text-danger">GET </strong>http://localhost:8000/api/cameres_seguretat
+                </div>
+                <div class="titol_delete mt-4"><h1>RESPONSE</h1></div>
 
-        fetch('http://127.0.0.1:8000/api/ubicacio_exacta/417105', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).then(function(response) {
-            return response.json();
-        }).then(function(myJson) {
-            $('#code7_res').text(JSON.stringify(myJson));
-            $('#code7_pet').text(" fetch('http://127.0.0.1:8000/api/ubicacio_exacta/417105', {     method: 'GET',     headers: {         'Content-Type': 'application/json'     }) }) .then(function(response) {     return response.json(); }) .then(function(myJson) { $('#code3_res').text(JSON.stringify(myJson)); });");
+                <div class="div_cameres_seguretat_get_response mt-4">
+                    <img class="img-fluid" src="images/imatge_1_response.png" alt="" width="380px">
+                </div>
+            </div>
 
-        });
-    </script>
+        </div>
 
-    <section>
+        <div class="row mb-5 espai">
+            <div class="col">
+                <div class="info">
+                    Insereix dades a la base de dades. Les dades JSON han de contenir totes les columnes de la taula i els paràmetres han de coincidir amb els noms de les columnes..
+                    <p>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L72">Veure codi del CameresController@cameres_seguretat[POST]</a>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-        <?php
-        $json_array = '[
-                        {"url":"/api/help",
-                        "body":"PEticion Get, no contiene body",
-                        "method":"GET",
-                        "response":"Nos devuelve un JSON con la informacion de las peticiones que podemos hacer",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"1",
-                        "title":"Help"} ,
-                        {"url":"/api/location/{lat}/{lon}",
-                        "body":"En este caso la peticion es get y se envia la latitud y longitud de la camara que queremos buscar",
-                        "method":"GET",
-                        "response":"la respuesta es un JSON con la direccion de la camara que se ha buscado",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"2",
-                        "title":"Search camera or cameras by location"},
-                        {"url":"/api/filter",
-                        "body":"Se introduce los parametros en formato JSON para poder filtrar, por ejemplo; {\"id_cam_seguretat\": 1}",
-                        "method":"POST",
-                        "response":"La respuesta es un JSON con los datos de la camara o camaras que coinciden con los parametros introducidos",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"3",
-                        "title":"Filter camera or cameras"},
-                        {"url":"/api/insert",
-                        "body":"En este caso lo que se va a enviar es la informacion de la camara que se quiere insertar en formato JSON",
-                        "method":"POST",
-                        "response":"",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"4",
-                        "title":"Insert camera or cameras"},
-                        {"url":"/api/update",
-                        "body":"",
-                        "method":"POST",
-                        "response":"",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"5",
-                        "title":"Update camera or cameras"},
-                        {"url":"/api/destroy",
-                        "body":"",
-                        "method":"POST",
-                        "response":"",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"6",
-                        "title":"Delete camera or cameras"},
-                        {"url":"/ubicacio_exacta/{id_cam_seguretat}",
-                        "body":"Petición get, no contiene body",
-                        "method":"GET",
-                        "response":"Nos dice la ubicacion exacta de la camara que se ha buscado segun su id",
-                        "example_petition":"",
-                        "example_response":"",
-                        "id":"7",
-                        "title":"Ubicacion excta cameras"}
-                         ]';
+        <div class="row cameres_seguretat_post">
 
-        $php_array = array();
-        $json_objects = json_decode($json_array);
+            <div class="col-7">
+                <div class="div_cameres_seguretat_post">
+                    <img class="img-fluid" src="images/imatge_2.png" alt="">
+                </div>
+                <div class="div_cameres_seguretat_post_function mt-5">
+                    <img class="img-fluid" src="images/imatge_2_function.png" alt="" >
+                </div>
+            </div>
 
-        foreach ($json_objects as $object) {
-            array_push($php_array, $object);
-        }
+            <div class="col-5">
+                <div class="call_exemple_cameres_seguretat_post">
+                    <strong class="text-danger">POST </strong>http://localhost:8000/api/cameres_seguretat
+                </div>
 
-        foreach ($php_array as $object) {
-            echo "<article>";
-            echo "<div>";
-            echo "<h3 class='title'>" . $object->title . "</h3>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "URL";
-            echo "</label><br>";
-            echo "<span id='span" . $object->id . "' name='span" . $object->id . "'>  " . $object->url . "</span>";
-            echo "</h4>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "BODY";
-            echo "</label><br>";
-            echo "<code id='span" . $object->id . "' name='span" . $object->id . "'> " . $object->body . "</code>";
-            echo "</h4>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "method";
-            echo "</label><br>";
-            echo "<span id='span" . $object->id . "' name='span" . $object->id . "'> " . $object->method . "</span>";
-            echo "</h4>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "response";
-            echo "</label><br>";
-            echo "<span id='span" . $object->id . "' name='span" . $object->id . "'> " . $object->response . "</span>";
-            echo "</h4>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "exaple petition";
-            echo "</label><br>";
-            echo "<span id='span" . $object->id . "' name='span" . $object->id . "'><br> ";
-            echo "<code id='code" . $object->id . "_pet'>";
-            echo $object->example_petition;
-            echo "</code>";
-            echo "</span>";
-            echo "</h4>";
-            echo "<h4>";
-            echo "<label class='title' for='url1'>";
-            echo "exaple response";
-            echo "</label>";
-            echo "<span id='span" . $object->id . "' name='span" . $object->id . "'><br> ";
-            echo "<code id='code" . $object->id . "_res' lang='json'>";
-            echo $object->example_response;
-            echo "</code>";
-            echo "</span>";
-            echo "</h4>";
-            echo "</div>";
-            echo "</article>";
-        }
+                <div class="div_cameres_seguretat_get_response mt-4">
+                    <img class="img-fluid" src="images/imatge_3_response.png" alt="" width="300px">
+                </div>
 
-        ?>
+                <div class="titol_delete mt-4"><h1>RESPONSE</h1></div>
 
 
-    </section>
+                <div class="div_cameres_seguretat_post_response_1 mt-4">
+                    <img class="img-fluid" src="images/imatge_2_response_1.png" alt="" width="180px">
+                </div>
+
+                <div class="div_cameres_seguretat_post_response_2 mt-4">
+                    <img class="img-fluid" src="images/imatge_2_response_2.png" alt="" width="350px">
+                </div>
+
+                <div class="div_cameres_seguretat_post_response_3 mt-4">
+                    <img class="img-fluid" src="images/imatge_2_response_3.png" alt="" width="340px">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5 espai">
+            <div class="col">
+                <div class="info">
+                    Obtenim tota la informació de la càmera amb l'ID que estem filtrant.
+                    <p>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L133">Veure codi del CameresController@cameres_seguretat</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cameres_seguretat_get_id">
+            <div class="col-7">
+                <div class="div_cameres_seguretat_get_id">
+                    <img class="img-fluid" src="images/imatge_3.png" alt="" width="680px">
+                </div>
+
+                <div class="div_cameres_seguretat_get_id_function mt-4">
+                    <img class="img-fluid" src="images/imatge_3_function.png" alt="" width="400px">
+                </div>
+
+            </div>
+
+            <div class="col-5">
+                <div class="call_exemple_cameres_seguretat_get_id">
+                    <strong class="text-danger">GET </strong>http://localhost:8000/api/cameres_seguretat/417365
+                </div>
+
+                <div class="titol_delete mt-5"><h1>RESPONSE</h1></div>
+
+
+                <div class="div_cameres_seguretat_get_response mt-4">
+                    <img class="img-fluid" src="images/imatge_3_response.png" alt="" width="390px">
+                </div>
+            </div>
+        </div>
+
+        
+        
+        <div class="row cameres_seguretat_put_id">
+            
+            <div class="row mb-5 espai">
+                <div class="col">
+                    <div class="info">
+                        PUT/PATCH: Actualitzem la informació de la càmera específica identificada amb l'ID que estem filtrant.
+                        <p>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L156">Veure codi del CameresController@cameres_seguretat[PUT/PATCH]</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+
+                    <div class="div_cameres_seguretat_put_id">
+                        <img class="img-fluid" src="images/imatge_4.png" alt="" width="650px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-8">
+    
+                    <div class="div_cameres_seguretat_put_id_function mt-5">
+                        <img class="img-fluid" src="images/imatge_4_function.png" alt="" width="535px">
+                    </div>
+    
+                </div>
+    
+                <div class="col-4">
+                    <div class="call_exemple_cameres_seguretat_put_id mt-5">
+                        <strong class="text-danger">PUT/PATCH </strong>http://localhost:8000/api/cameres_seguretat/33333
+                    </div>
+    
+                    <div class="div_cameres_seguretat_put_id_call mt-4">
+                        <img class="img-fluid" src="images/imatge_4_call_put.png" alt="">
+                    </div>
+                    <div class="titol_update mt-5"><h1>RESPONSE</h1></div>
+    
+                    <div class="div_cameres_seguretat_put_id_response_1 mt-4">
+                        <img class="img-fluid" src="images/imatge_2_response_1.png" alt="">
+                    </div>
+    
+                    <div class="div_cameres_seguretat_put_id_response_2 mt-4">
+                        <img class="img-fluid" src="images/imatge_4_response_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <div class="row cameres_seguretat_delete_id">
+
+            <div class="row mb-5 espai">
+                <div class="col">
+                    <div class="info">
+                        DELETE: Esborrem la informació de la càmera específica identificada amb l'ID que estem filtrant.
+                        <p>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L187">Veure codi del CameresController@cameres_seguretat[DELETE]</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    <div class="div_cameres_seguretat_delete_id">
+                        <img class="img-fluid" src="images/imatge_5.png" alt="" width="650px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-7">
+    
+                    <div class="div_cameres_seguretat_delete_id_function mt-5">
+                        <img class="img-fluid" src="images/imatge_5_function.png" alt=""  width="665px">
+                    </div>
+                </div>
+    
+                <div class="col-5">
+                    <div class="call_exemple_cameres_seguretat_delete_id mt-5">
+                        <strong class="text-danger">DELETE </strong>http://localhost:8000/api/cameres_seguretat/33333
+                    </div>
+    
+                    <div class="titol_delete mt-4"><h1>RESPONSE</h1></div>
+    
+                    <div class="div_cameres_seguretat_delete_id_response_1 mt-4">
+                        <img class="img-fluid" src="images/imatge_2_response_1.png" alt="">
+                    </div>
+    
+                    <div class="div_cameres_seguretat_delete_id_response_2 mt-4">
+                        <img class="img-fluid" src="images/imatge_4_response_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-5 espai">
+            <div class="col">
+                <div class="info">
+                    Filtra els registres de la taula càmeres segons els paràmetres proporcionats a la sol·licitud.
+                    Els paràmetres s'han d'enviar en format JSON i han de coincidir amb els noms de les columnes de la taula.
+                    Torna una llista de resultats que coincideixen amb els criteris de filtratge.
+                    <p>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L106">Veure codi del CameresController@filter</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row filter">
+            <div class="col-8">
+                <div class="div_filter">
+                    <img class="img-fluid" src="images/imatge_6.png" alt="">
+                </div>
+
+                <div class="div_filter_function mt-5">
+                    <img class="img-fluid" src="images/imatge_6_function.png" alt="">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="call_exemple_filter">
+                    <strong class="text-danger">POST </strong>http://localhost:8000/api/filter
+                </div>
+
+                <div class="div_filter_call mt-5">
+                    <img class="img-fluid" src="images/imatge_6_call_filter.png" alt="">
+                </div>
+
+                <div class="titol_delete mt-5"><h1>RESPONSE</h1></div>
+
+                <div class="div_filter_response_1 mt-4">
+                    <img class="img-fluid" src="images/imatge_6_response_1.png" alt="" width="355px">
+                </div>
+
+                <div class="div_filter_response_2 mt-4">
+                    <img class="img-fluid" src="images/imatge_6_response_2.png" alt="">
+                </div>
+
+                <div class="div_filter_response_2 mt-4">
+                    <img class="img-fluid" src="images/imatge_6_response_3.png" alt="">
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="row mb-5 espai">
+            <div class="col">
+                <div class="info">
+                    Recupera la ubicació geogràfica a partir de les coordenades de latitud i longitud proporcionades.
+                    Retorna les dades d'adreça trobades en format JSON.
+                    <p>
+                        <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L26">Veure codi del CameresController@location</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row location">
+            <div class="col-7">
+                <div class="div_location">
+                    <img class="img-fluid" src="images/imatge_7.png" alt="" width="600px">
+                </div>
+
+                <div class="div_location_function mt-5">
+                    <img class="img-fluid" src="images/imatge_7_function.png" alt="" width="600px">
+                </div>
+            </div>
+
+            <div class="col-5">
+                <div class="call_exemple_location">
+                    <strong class="text-danger">GET </strong>http://localhost:8000/api/location/41.3399628/2.1210822
+                </div>
+
+                <div class="titol_delete mt-5"><h1>RESPONSE</h1></div>
+
+                <div class="div_location_response_1 mt-4">
+                    <img class="img-fluid" src="images/imatge_7_response_1.png" alt="">
+                </div>
+
+                <div class="div_location_response_2 mt-4">
+                    <img class="img-fluid" src="images/imatge_7_response_2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div class="row ubicacio_exacta">
+
+            <div class="row mb-5 espai">
+                <div class="col">
+                    <div class="info">
+                        A partir de l'ID de càmera de seguretat, aquesta funció recupera la ubicació geogràfica precisa de la càmera.
+                        <p>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L51">Veure codi del CameresController@ubicacio_exacta</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="div_ubicacio_exacta">
+                        <img class="img-fluid" src="images/imatge_8.png" alt="" width="650px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-7">
+    
+                    <div class="div_ubicacio_exacta_function mt-5">
+                        <img class="img-fluid" src="images/imatge_8_function.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="col-5">
+                    <div class="call_exemple_ubicacio_exacta mt-5">
+                        <strong class="text-danger">GET </strong>http://localhost:8000/api/ubicacio_exacta/417105
+                    </div>
+    
+                    <div class="titol_delete mt-4"><h1>RESPONSE</h1></div>
+    
+                    <div class="div_ubicacio_exacta_response_1 mt-4">
+                        <img class="img-fluid" src="images/imatge_8_response_1.png" alt="" width="335px">
+                    </div>
+    
+                    <div class="div_ubicacio_exacta_response_2 mt-4">
+                        <img class="img-fluid" src="images/imatge_8_response_2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row help mb-5">
+
+            <div class="row mb-5 espai">
+                <div class="col">
+                    <div class="info">
+                        Obté tota la informació de cadascuna de les rutes que tenim habilitades per fer consultes, en concret la ruta, els mètodes, els paràmetres i la descripció.
+                        <p>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/app/Http/Controllers/CameresController.php#L202">Veure codi del CameresController@help</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+
+                    <div class="div_help">
+                        <img class="img-fluid" src="images/imatge_9.png" alt="" width="835px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-7">
+    
+                    <div class="div_help_function mt-5">
+                        <img class="img-fluid" src="images/imatge_9_function.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="col-5">
+                    <div class="call_exemple_help mt-5">
+                        <strong class="text-danger">GET </strong>http://localhost:8000/api/help
+                    </div>
+    
+                    <div class="titol_delete mt-5"><h1>RESPONSE</h1></div>
+    
+                    <div class="div_help_response mt-4">
+                        <img class="img-fluid" src="images/imatge_9_response.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('/js/script.js')}}"></script>
 </body>
-
 </html>

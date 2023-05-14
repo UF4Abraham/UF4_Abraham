@@ -1,0 +1,129 @@
+.div_cameres_seguretat_get,
+.div_cameres_seguretat_post,
+.div_cameres_seguretat_get_id,
+.div_cameres_seguretat_put_id,
+.div_cameres_seguretat_delete_id,
+.div_filter,
+.div_location,
+.div_ubicacio_exacta,
+.div_help
+{
+	background-color: #212121;
+    border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+}
+
+
+.div_cameres_seguretat_get_response,
+.div_cameres_seguretat_post_response_1,
+.div_cameres_seguretat_post_response_2,
+.div_cameres_seguretat_post_response_3,
+.div_cameres_seguretat_put_id_response_1,
+.div_cameres_seguretat_put_id_response_2,
+.div_cameres_seguretat_put_id_call,
+.div_cameres_seguretat_delete_id_response_1,
+.div_cameres_seguretat_delete_id_response_2,
+.div_filter_response_1,
+.div_filter_response_2,
+.div_filter_response_3,
+.div_filter_call,
+.div_location_response_1,
+.div_location_response_2,
+.div_ubicacio_exacta_response_1,
+.div_ubicacio_exacta_response_2,
+.div_help_response
+{
+	background-color: #212121;
+    border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+}
+
+
+.div_cameres_seguretat_get_function, 
+.div_cameres_seguretat_post_function, 
+.div_cameres_seguretat_get_id_function, 
+.div_cameres_seguretat_put_id_function, 
+.div_cameres_seguretat_delete_id_function,
+.div_filter_function,
+.div_location_function,
+.div_ubicacio_exacta_function,
+.div_help_function
+{
+	background-color: #212121;
+    border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+}
+
+.call_exemple_cameres_seguretat_get,
+.call_exemple_cameres_seguretat_post,
+.call_exemple_cameres_seguretat_get_id,
+.call_exemple_cameres_seguretat_put_id,
+.call_exemple_cameres_seguretat_delete_id,
+.call_exemple_filter,
+.call_exemple_location,
+.call_exemple_ubicacio_exacta,
+.call_exemple_help
+{
+	background-color: #212121;
+    border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+.espai{
+	margin-top: 150px;
+}
+
+
+.titol{
+	font-weight: bolder;
+	color: rgb(194, 250, 109);
+	background-color: #212121;
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+	text-align: center;
+	margin-top: 75px;
+}
+
+
+.titol_update{
+	font-weight: bolder;
+	color: rgb(194, 250, 109);
+	background-color: #212121;
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+	text-align: center;
+	/* margin-top: 75px; */
+}
+
+
+.titol_delete{
+	font-weight: bolder;
+	color: rgb(194, 250, 109);
+	background-color: #212121;
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+	text-align: center;
+}
+
+
+.info{
+	background-color: #462020;
+
+	border-radius: 8px;
+	box-shadow: 7px 13px 37px #000000;
+	padding: 10px;
+	color: white;
+	padding-left: 35px;
+}
