@@ -386,7 +386,8 @@
     <style>
         body {
             font-family: 'Nunito', sans-serif;
-            background-color: grey;
+            background-color: red;
+
         }
 
         .class_nav {
@@ -395,21 +396,34 @@
             min-height: 10%;
             color: white;
         }
+        section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: darkblue;
+        }
 
         article {
-            background-color: white;
+            background-color: #00003b;
             width: 100%;
             min-height: 10%;
             color: black;
+            padding: 10px;
+        }
+        h3{
+            color: white;
+            background-color: black;
         }
 
         /* los articulo par estara alineado a la derecha y los impares a las izquierda */
         article:nth-child(even) {
             text-align: right;
+            left: 25%;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         div {
-            padding: 10px;
             align-content: left;
             background-color: grey;
 
