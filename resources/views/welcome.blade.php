@@ -14,10 +14,53 @@
     <title>API Càmeres Seguretat</title>
 </head>
 <body>
+
+
     <div class="container">
 
-        <h1 class="fw-bold mt-5">API Càmeres Seguretat</h1>
+        <h1 class="fw-bold mt-5">API Càmeres Seguretat GitHub: <a href="https://github.com/UF4Abraham/UF4_Abraham">Click here</a></h1>
         
+
+        <div class="row help mb-5">
+
+            <div class="row mb-5 espai">
+                <div class="col">
+                    <div class="info">
+                       Aquest es el codi que em fet servir per crear el valors dins de la base de dades.
+                        <p>
+                            <a href="https://github.com/UF4Abraham/UF4_Abraham/blob/main/database/seeders/CameresSeguretatSeeder.php">Veure codi del import de les dades</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                
+                <div class="col-7">
+    
+                    <div class="div_help_function mt-5">
+                        <img class="img-fluid" src="images/imatge_10_function.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="col-5">
+                    
+                    <div class="titol_delete mt-5"><h1>Explanation</h1></div>
+    
+                    <div class="div_help_response mt-4" style="color:aliceblue;">
+
+                        <span class="text-danger">1. </span> El seeder importa los datos del archivo CSV desde la URL pública utilizando la librería cURL. Los datos se guardan temporalmente en un archivo CSV en la ruta ./storage/database/csv_data/tmp.csv.<br>
+                        <span class="text-danger">2. </span>Una vez que se han descargado los datos del archivo CSV, se crea un objeto CSV Reader utilizando la librería "League\Csv".<br>
+                        <span class="text-danger">3. </span>Luego, el seeder trunca la tabla "cameras" utilizando la fachada de Laravel "DB".<br>
+                        <span class="text-danger">4. </span>Después, se itera sobre cada fila del archivo CSV. Cada fila se inserta en la tabla "cameras" utilizando los nombres de las columnas como claves y si el valor es una cadena vacía o nulo, se utiliza null en su lugar.<br>
+                        <span class="text-danger">5. </span>Finalmente, el seeder elimina el archivo CSV temporal y cierra la petición cURL.<br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <div class="row mt-5">
             <div class="col">
 
@@ -436,6 +479,7 @@
             </div>
 
         </div>
+
 
 
     </div>

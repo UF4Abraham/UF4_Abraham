@@ -39,33 +39,19 @@ class CameresSeguretatSeeder extends Seeder
         ));
         //ejecutamos la peticion
         $respuesta = curl_exec($curl);
-
         //guardamos la respuesta en un archivo csv  en la ruta ./database/csv_data/
         // mkdir(base_path('storage\database\csv_data'), 0777, true);
-
         file_put_contents(base_path('storage\database\csv_data\tmp.csv'), $respuesta);
-
-
-
         // file_get_contents(base_path('./database/csv_data/tmp.csv'), $respuesta);
-
         //mostar la respuesta por consola
         echo $respuesta;
-
-
         // Ruta del archivo CSV
         $csvFile = storage_path('database\csv_data\tmp.csv');
-        //eliminamos la primera fila del archivo csv
-
-
         // Crear un objeto CSV Reader
         $csv = Reader::createFromPath($csvFile, 'r');
         $csv->setHeaderOffset(0);
-
         //truncate table
         DB::table('cameras')->truncate();
-
-
         // Iterar sobre las filas del archivo CSV
         foreach ($csv->getRecords() as $record) {
             // Insertar la fila en la tabla, usando los nombres de las columnas como claves y si el valor es '' o null, usar null
